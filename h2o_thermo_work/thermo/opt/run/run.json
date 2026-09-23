@@ -1,0 +1,13 @@
+{
+  "state": "ok",
+  "returncode": 0,
+  "started_at": "2026-09-23T16:41:13+09:00",
+  "finished_at": "2026-09-23T16:45:30+09:00",
+  "hostname": "node4",
+  "stdout": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run/job.out",
+  "error": null,
+  "backend": "slurm",
+  "job_id": "14103",
+  "symptom": null,
+  "__type__": "RunRecord"
+}

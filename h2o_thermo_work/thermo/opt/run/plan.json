@@ -1,0 +1,59 @@
+{
+  "jobname": "thermo-opt",
+  "rundir": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run",
+  "job": {
+    "cwd": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run",
+    "stdout": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run/job.out",
+    "env": {
+      "kind": "module",
+      "modules": [
+        "orca/v6.0.1"
+      ],
+      "conda_env": null,
+      "pre": [],
+      "exports": {
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "__type__": "EnvInfo"
+    },
+    "command": "orca job.inp",
+    "__type__": "ShellJob"
+  },
+  "outputs": {
+    "rundir": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run",
+    "outfile": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run/job.out",
+    "engradfile": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run/job.engrad",
+    "hessfile": null,
+    "gbwfile": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run/job.gbw",
+    "propertyfile": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run/job.property.txt",
+    "xyzfile": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run/job.xyz",
+    "trjfile": "/home/acc-2022-16125/applied-computational-chemistry/h2o_thermo_work/thermo/opt/run/job_trj.xyz",
+    "__type__": "OrcaOutputInfo"
+  },
+  "resources": {
+    "job_name": "thermo-opt",
+    "time": "24:00:00",
+    "partition": null,
+    "constraint": null,
+    "nodes": 1,
+    "cores": 1,
+    "ntasks": 1,
+    "cpus_per_task": 1,
+    "mem": null,
+    "gres": null,
+    "nodelist": null,
+    "exclude": null,
+    "extra_directives": [
+      "#SBATCH --export=ALL,OMPI_MCA_plm=slurm"
+    ],
+    "__type__": "Resources"
+  },
+  "version": "6.0.1",
+  "profile_matches": "6.0.*",
+  "executable": "orca",
+  "sub_versions": {},
+  "__type__": "RunPlan"
+}

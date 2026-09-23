@@ -1,0 +1,107 @@
+{
+  "nodes": {
+    "thermo/opt": {
+      "id": "thermo/opt",
+      "task": {
+        "system": {
+          "geometry": {
+            "elements": [
+              "O",
+              "H",
+              "H"
+            ],
+            "coordinates": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.75716,
+                0.58626,
+                0.0
+              ],
+              [
+                -0.75716,
+                0.58626,
+                0.0
+              ]
+            ],
+            "name": "h2o",
+            "__type__": "GeometryQM"
+          },
+          "charge": 0,
+          "spin": 0,
+          "__type__": "SystemQM"
+        },
+        "theory": {
+          "conv_tol": null,
+          "max_cycle": null,
+          "reference": "auto",
+          "relativity": null,
+          "basis": "6-31G(d)",
+          "spherical": null,
+          "density_fit": null,
+          "solvent": null,
+          "functional": "B3LYP",
+          "dispersion": null,
+          "grid": null,
+          "__type__": "DFT"
+        },
+        "constraints": [],
+        "__type__": "OptTask"
+      },
+      "inputs": {},
+      "outputs": false,
+      "role": "opt",
+      "__type__": "ExecNode"
+    },
+    "thermo/hess": {
+      "id": "thermo/hess",
+      "task": {
+        "system": {
+          "geometry": {
+            "quantity": "geometry_qm",
+            "source": "thermo/opt",
+            "value": null,
+            "__type__": "Edge"
+          },
+          "charge": 0,
+          "spin": 0,
+          "__type__": "SystemQM"
+        },
+        "theory": {
+          "conv_tol": null,
+          "max_cycle": null,
+          "reference": "auto",
+          "relativity": null,
+          "basis": "6-31G(d)",
+          "spherical": null,
+          "density_fit": null,
+          "solvent": null,
+          "functional": "B3LYP",
+          "dispersion": null,
+          "grid": null,
+          "__type__": "DFT"
+        },
+        "numerical": false,
+        "raman": false,
+        "temperature": 298.15,
+        "pressure": 1.0,
+        "__type__": "HessTask"
+      },
+      "inputs": {
+        "system.geometry": {
+          "quantity": "geometry_qm",
+          "source": "thermo/opt",
+          "value": null,
+          "__type__": "Edge"
+        }
+      },
+      "outputs": true,
+      "role": "hessian",
+      "__type__": "ExecNode"
+    }
+  },
+  "__type__": "ExecGraph"
+}

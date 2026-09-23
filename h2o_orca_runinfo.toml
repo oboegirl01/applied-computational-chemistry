@@ -1,0 +1,3 @@
+# Run-local override: ORCA execution is configured directly in h2o_thermo.py.
+# Keeping this file free of unrelated engine entries avoids validating the
+# site-wide, unavailable Gaussian executable.
